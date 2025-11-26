@@ -1,0 +1,59 @@
+Container Orchestration with Kubernetes
+Kubernetes and its features
+Compare Docker swarm and Kubernetes
+Installation of Kubernetes on EC2 server - Kubernetes cluster
+What is a POD in Kubernetes
+
+Kubernetes: - K8s
+1. It is an open source tool
+2. It was a product of google and is build using go language
+3. Kubernetes is not like docker , you cannot create images in Kubernetes - It is not a container runtime engine (docker)
+4. Kubernetes is the next step after docker -> It is container orchestration tool
+5. Kubernetes provides  features like:
+  - creating n number of containers from 1 image - Replicas
+  - Distribute container on many VMs
+  - Auto Scaling of containers 
+  - High availability of containers
+  - rolling update deployment strategy
+6. Kubernetes is a production grade orchestration tool
+7. Support auto scaling of containers based on the actual user traffic
+8. Supports storing of the container data in external storage drivers - NFS, EBS, PD, Azure disk
+9. It also is present on all the 3 clouds as a service - AKS, EKS, GKE - readymade kubernetes clusters 
+10.In Kubernetes we have jobs and Crons job to schedule creation of containers at a given time 
+11. Kubernetes is a production grade tool it supports network policies for secure access to your containers 
+12. Kubernetes is a production grade it supports implementation of ingress - network load balancing
+13. Kubernetes is a production grade supports RBAC and cluster wide role access
+
+
+Docker Swarm 
+"Doesnot require to be installed
+Comes pre installed with Docker"
+Exclusive orchestration tool for docker
+No Autoscaling
+No storage of container data in external storage
+comes with inbuot network - docker 0 network
+It provides only an object called service
+Command can be run on docker swarm machine and container are created on the same machine
+Free version doesnot have any GUI
+No such feature
+No such feature
+No such feature
+
+
+Kubernetes
+We have to install kubernetes manster and worker node
+It is a global tool, it can orchestrate containers of any container runtime like CRI-O, contaienrd, docker, RKT containers
+Horizontal and vertical auto scaling
+external storage association for contaienr data
+We have to install container network plugin
+"here for every orchestration task there is separate object:
+container: Pod
+replicas : replicaset object
+rolling update: deployment object
+port mapping: services
+autoscaling: HPA, VPA objects"
+Commands by default will be run on master machine and contaienr will be created on worker machines
+Has a GUI dashboard
+Can be integrated with monitoring tools like prometheus and grafana
+Comes with helm for automation
+can be integrated with gitops tools
