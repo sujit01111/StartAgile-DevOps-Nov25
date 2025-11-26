@@ -57,3 +57,21 @@ Has a GUI dashboard
 Can be integrated with monitoring tools like prometheus and grafana
 Comes with helm for automation
 can be integrated with gitops tools
+
+
+orchestration: 
+creating many container from an image 
+scale up and scale down of containers 
+ensure desired count of container is running
+
+Kubernetes Master 
+- all Kubernetes orchestration commands will run on Master 
+- Assume it to be like a leader in a team 
+- 4 components will be installed automatically [apiServer, schedular, etcd, controller manager]
+- On master you execute the command to create container 
+
+Kubernetes Worker
+- no orchestration commands will run on Worker 
+- Assume it to be like a team member 
+- 2 components to be installed [ kubeproxy, kubelet]
+- container will be deployed and run on the worker 
